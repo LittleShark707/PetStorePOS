@@ -1,0 +1,89 @@
+﻿<Window x:Class="FINALPROJECTPOS.Window6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FINALPROJECTPOS"
+        mc:Ignorable="d"
+        Title="Window6" Height="450" Width="800" Background="#fff5e4">
+    <Grid>
+        <StackPanel Background="#ffdae0" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="795">
+            <Label Content="Insert" Height="61" FontFamily="Corbel Light" FontSize="36" Margin="10,0,555,0"/>
+        </StackPanel>
+        <Button x:Name="back" Margin="710,16,0,0" Content="ᐊ" Cursor="Hand" BorderBrush="#dafff9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Height="30" FontFamily="Corbel Light" FontSize="24" Click="back_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#dafff9"/>
+                    <Setter Property="Foreground" Value="#576663"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#daf3ff"/>
+                            <Setter Property="Foreground" Value="#ff8ea0" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <StackPanel Background="#dae0ff" HorizontalAlignment="Left" Height="310" Margin="10,69,0,0" VerticalAlignment="Top" Width="118">
+            <Label Content="DID:" Margin="0,12,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="BID:" Margin="0,10,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="GID:" Margin="0,10,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="Age:" Margin="0,10,31,0" Height="27" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="Birthday:" Margin="0,6,31,0" Height="27" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="Description:" Margin="0,6,31,0" Height="27" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="Price:" Margin="0,5,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="BrID:" Margin="0,10,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+            <Label Content="SID:" Margin="0,10,31,0" Height="23" HorizontalAlignment="Right" FontFamily="Corbel Light"/>
+        </StackPanel>
+        <StackPanel Background="#dae0ff" HorizontalAlignment="Left" Height="310" Margin="100,69,0,0" VerticalAlignment="Top" Width="248">
+            <TextBox x:Name="tb0" BorderBrush="Transparent" Height="23" Margin="20,12,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb1" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb2" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb3" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb4" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb5" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb6" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb7" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+            <TextBox x:Name="tb8" BorderBrush="Transparent" Height="23" Margin="20,10,56,0" TextWrapping="Wrap" FontFamily="Microsoft JhengHei Light"/>
+        </StackPanel>
+        <ScrollViewer Margin="353,61,0,0.5">
+            <StackPanel Background="#fff5e4" HorizontalAlignment="Left" Height="574" Margin="70,0,0,0" VerticalAlignment="Top" Width="304">
+                <DataGrid x:Name="bid" Height="178" Margin="10,20,25,0" Background="White" BorderBrush="Transparent" FontFamily="Microsoft JhengHei Light"/>
+                <DataGrid x:Name="gid" Height="90" Margin="10,20,25,0" Background="White" BorderBrush="Transparent" FontFamily="Microsoft JhengHei Light"/>
+                <DataGrid x:Name="brid" Height="178" Margin="10,20,25,0" Background="White" BorderBrush="Transparent" FontFamily="Microsoft JhengHei Light"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="insert" Margin="10,379,0,0" Content="Insert" Cursor="Hand" BorderBrush="#dafff9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="338" Height="30" FontFamily="Corbel Light" FontSize="24" Click="insert_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#dafff9"/>
+                    <Setter Property="Foreground" Value="#576663"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="20">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#daf3ff"/>
+                            <Setter Property="Foreground" Value="#ff8ea0" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
